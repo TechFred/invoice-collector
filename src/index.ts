@@ -1,10 +1,14 @@
 import path from 'path';
 import express from 'express';
 import dotenv from 'dotenv';
+dotenv.config();
+console.log("test");
+console.log("Env loaded:", process.env);
+console.log("OAUTH_TOKEN_VALIDITY_DURATION_MS:", process.env.OAUTH_TOKEN_VALIDITY_DURATION_MS);
 import { StatusError, TermsConditionsError } from "./error"
 import { Server } from "./server"
 import * as utils from "./utils"
-dotenv.config();
+
 
 // Configure express
 const app = express()
